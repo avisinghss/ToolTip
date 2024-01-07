@@ -1,0 +1,131 @@
+/* for the outer container */
+.container {
+  text-align: center;
+  background-color: #3d3d87;
+  height: 57.4vh;
+  padding: 8rem;
+  color: aliceblue;
+}
+
+/* making the background color different for the seleceted button */
+.selected {
+  background-color: greenyellow;
+}
+
+/* button container */
+.button-container {
+  margin-left: 5rem;
+}
+.button-container button {
+  margin-right: 5rem;
+  width: 55px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+/* toolpit container */
+.tooltipContainer {
+  position: relative;
+  display: inline-block;
+  border: none;
+  border-bottom: 1px dotted black;
+  margin-top: 4rem;
+  width: 9rem;
+  padding: 8px;
+  border-radius: 20px;
+  background-color: #76ff9e;
+  font-weight: bold;
+}
+
+/* toolpit style */
+
+/* left style of the toolpit with the arrow */
+.left {
+  padding: 5px;
+  border-radius: 10px;
+  position: relative;
+  left: 27%;
+  margin-top: -2rem;
+}
+.left::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 100%; /* To the right of the tooltip */
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent black;
+}
+
+/* right style of the toolpit with the arrow */
+.right {
+  padding: 5px;
+  border-radius: 10px;
+  position: relative;
+  left: 60%;
+  margin-top: -2rem;
+}
+.right::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  right: 100%; /* To the left of the tooltip */
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+
+/* top style of the toolpit with the arrow */
+.top {
+  padding: 5px;
+  border-radius: 10px;
+  position: relative;
+  left: 44%;
+  margin-top: -78px;
+}
+.top::after {
+  content: " ";
+  position: absolute;
+  top: 100%; /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+/* bottom style of the toolpit with the arrow */
+.bottom {
+  padding: 5px;
+  border-radius: 10px;
+  width: fit-content;
+  position: relative;
+  left: 44%;
+  margin-top: 1rem;
+  width: 30px;
+}
+.bottom::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%; /* At the top of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+
+/* text to be shown  */
+#tooltipText {
+  display: block;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  width: 7rem;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+}
